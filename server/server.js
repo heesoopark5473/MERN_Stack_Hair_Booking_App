@@ -41,8 +41,9 @@ app.get('/api/logout', auth, (req,res) => {
 app.get('/api/salons', (req,res) => {
     let limit = parseInt(req.query.limit);
     let order = req.query.order;
+    let city  = req.query.city;
 
-    Salon.find().sort({rating:order}).limit(limit).exec((err,doc) => {
+    Salon.find({city:city}).sort({rating:order}).limit(limit).exec((err,doc) => {
         if(err) return res.status(400).send(err);
         res.send(doc);
     })

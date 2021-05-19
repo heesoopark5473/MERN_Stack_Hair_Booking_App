@@ -1,0 +1,17 @@
+.searchBar {
+    width: 80%;
+    height:60px;
+    margin: 10%;
+    font-size: 20px;
+    font-weight:bold;
+    text-align: center;
+    border: lightsteelblue 3px solid;
+    opacity: 0.75;
+    border-radius: 15px;
+}
+
+.searchBar:focus {
+    outline: none;
+    border: lightseagreen 3px solid;
+    border-radius: 15px;
+}

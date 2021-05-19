@@ -10,11 +10,11 @@ import './styles.css';
 class Recommendation extends Component {
 
     UNSAFE_componentWillMount() {
-        this.props.dispatch(getSalons(5, 'desc'))
+        this.props.dispatch(getSalons(5, 'desc', 'Burnaby'))
     }
 
     imageClick = () => {
-        console.log("Image Clicked!")
+        console.log("Image Clicked")
     }
 
     renderItems = (salons) => (
@@ -71,7 +71,7 @@ class Recommendation extends Component {
 
     render() {
         return(
-            <div style={{backgroundColor: "grey"}}>
+            <div>
                 <div className="row">
                     {this.renderItems(this.props.salons)}
                 </div>

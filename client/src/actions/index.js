@@ -39,9 +39,10 @@ export function auth() {
 export function getSalons(
     limit = 2,
     order = 'desc',
+    city  = ''
 ) {
 
-    const request = axios.get(`/api/salons?limit=${limit}&order=${order}`)
+    const request = axios.get(`/api/salons?city=${city}&limit=${limit}&order=${order}`)
         .then(response => {
             return response.data
         }
